@@ -602,6 +602,49 @@ body {
   }
 }
 
+// 用户反馈独立元素样式 - 完全不影响原有流程
+.user-feedback-standalone {
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid $accent-color;
+  }
+  position: absolute;
+  top: -200px;
+  left: 300px;
+  background: $accent-color;
+  border-radius: $border-radius;
+  padding: 25px;
+  box-shadow: $shadow-lg;
+  min-width: 250px;
+  z-index: 10;
+  
+  .feedback-content {
+    text-align: center;
+    
+    .feedback-title {
+      color: $bg-primary;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    
+    p {
+      color: $bg-primary;
+      font-size: 1rem;
+      margin-bottom: 0;
+      line-height: 1.4;
+    }
+  }
+}
+
 .step-number {
   width: 80px;
   height: 80px;
@@ -674,11 +717,11 @@ body {
   }
   
   &:nth-child(4) {
-    transform: translateY(40px) rotate(135deg);
+    transform: translateY(40px) rotate(315deg);
   }
   
   &:nth-child(6) {
-    transform: translateY(40px) rotate(225deg);
+    transform: translateY(40px) rotate(45deg);
   }
   
   &:nth-child(8) {

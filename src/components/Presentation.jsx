@@ -4,7 +4,7 @@ import './Presentation.scss';
 const Presentation = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const totalSlides = 13;
+  const totalSlides = 10;
 
   // 幻灯片控制函数
   const nextSlide = () => {
@@ -84,8 +84,8 @@ const Presentation = () => {
         return (
           <div className="slide" id="slide-1">
             <div className="slide-content">
-              <h1 className="title main-title">换组分享</h1>
-              <div className="subtitle module-title">工作方式与技术架构</div>
+              <h1 className="title main-title">AI麦可换组分享</h1>
+              <div className="subtitle module-title" style={{fontSize:'50px'}}>工作方式与技术架构</div>
               <div className="presenter-info">
                 <p>分享人：韩志朋</p>
                 <p>2025-08-20</p>
@@ -96,17 +96,17 @@ const Presentation = () => {
 
       case 2:
         return (
-          <div className="slide" id="slide-2">
+          <div className="slide" id="slide-2" style={{paddingTop:0}}>
             <div className="slide-content">
               <h2 className="slide-title">目录</h2>
               <div className="content-list">
-                                  <div className="content-item">
-                    <span className="number">01</span>
-                    <div className="content-details">
-                      <span className="text">工作方式</span>
-                      <p className="description">敏捷开发流程、版本发布流程</p>
-                    </div>
+                <div className="content-item">
+                  <span className="number">01</span>
+                  <div className="content-details">
+                    <span className="text">工作方式</span>
+                    <p className="description">敏捷开发流程、版本发布流程</p>
                   </div>
+                </div>
                 <div className="content-item">
                   <span className="number">02</span>
                   <div className="content-details">
@@ -157,7 +157,7 @@ const Presentation = () => {
                         <ul>
                           <li>时间：每天固定时间（10:00）</li>
                           <li>时长：控制在15分钟内</li>
-                          <li>内容：昨日完成、今天计划、遇到问题</li>
+                          <li>内容：昨日完成、今日计划、遇到问题</li>
                           <li>参与：开发、测试、产品</li>
                         </ul>
                       </div>
@@ -184,15 +184,22 @@ const Presentation = () => {
 
       case 5:
         return (
-          <div className="slide" id="slide-5">
+          <div className="slide" id="slide-5" style={{ paddingTop: '200px' }}>
             <div className="slide-content">
               <div className="section">
                 <h2 className="section-title topic-title">1.2 版本流程</h2>
                 <div className="process-flow">
                   <div className="process-step">
+                  <div className="user-feedback-standalone">
+                  <div className="feedback-content">
+                    <h3 className="feedback-title">用户反馈</h3>
+                    <p>响应用户反馈，调整优先级</p>
+                  </div>
+                  <div className="feedback-arrow-to-dev"></div>
+                </div>
                     <div className="step-number">1</div>
                     <div className="step-content">
-                      <h3 className="step-title">开发完成</h3>
+                      <h3 className="step-title">开发介入</h3>
                       <p>功能开发完成后立即进入测试</p>
                     </div>
                   </div>
@@ -204,7 +211,7 @@ const Presentation = () => {
                       <p>确保功能质量与稳定性</p>
                     </div>
                   </div>
-                  <div className="arrow">→</div>
+                  <div className="arrow"></div>
                   <div className="process-step">
                     <div className="step-number">3</div>
                     <div className="step-content">
@@ -212,7 +219,7 @@ const Presentation = () => {
                       <p>每月底发布新版本，发布版本更新通知</p>
                     </div>
                   </div>
-                  <div className="arrow">→</div>
+                  <div className="arrow"></div>
                   <div className="process-step">
                     <div className="step-number">4</div>
                     <div className="step-content">
@@ -220,11 +227,11 @@ const Presentation = () => {
                       <p>收集用户反馈，规划下月功能需求</p>
                     </div>
                   </div>
-                  <div className="arrow">→</div>
+                  <div className="arrow"></div>
                   <div className="process-step">
                     <div className="step-number">1</div>
                     <div className="step-content">
-                      <h3 className="step-title">开发完成</h3>
+                      <h3 className="step-title">开发介入</h3>
                       <p>功能开发完成后立即进入测试</p>
                     </div>
                   </div>
@@ -234,62 +241,7 @@ const Presentation = () => {
           </div>
         );
 
-      // case 6:
-        return (
-          <div className="slide" id="slide-6">
-            <div className="slide-content">
-              <div className="section">
-                <h2 className="section-title topic-title">1.3 次月需求规划</h2>
-                <div className="feature-list">
-                  <div className="feature-item">
-                    <div className="feature-content">
-                      <h3 className="feature-title">需求收集</h3>
-                      <p>多渠道收集用户反馈和业务需求</p>
-                      <div className="detail-points">
-                        <ul>
-                          <li>用户反馈：产品使用体验、功能建议</li>
-                          <li>业务需求：业务部门提出的功能需求</li>
-                          <li>技术优化：性能提升、架构改进建议</li>
-                          <li>竞品分析：市场调研、竞品功能对比</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="feature-item">
-                    <div className="feature-content">
-                      <h3 className="feature-title">需求评估</h3>
-                      <p>对收集的需求进行优先级排序和可行性分析</p>
-                      <div className="detail-points">
-                        <ul>
-                          <li>业务价值：需求对业务的重要程度</li>
-                          <li>技术难度：开发工作量和技术复杂度</li>
-                          <li>资源投入：人力、时间、成本评估</li>
-                          <li>风险评估：技术风险和业务风险分析</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="feature-item">
-                    <div className="feature-content">
-                      <h3 className="feature-title">规划制定</h3>
-                      <p>制定下月开发计划和里程碑</p>
-                      <div className="detail-points">
-                        <ul>
-                          <li>功能规划：确定下月要开发的核心功能</li>
-                          <li>时间安排：制定详细的开发时间表</li>
-                          <li>资源分配：合理分配开发、测试资源</li>
-                          <li>里程碑：设定关键节点和交付目标</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        );
-
-      case 7:
+      case 6:
         return (
           <div className="slide" id="slide-7">
             <div className="slide-content">
@@ -322,7 +274,7 @@ const Presentation = () => {
 
 
 
-      case 9:
+      case 7:
         return (
           <div className="slide" id="slide-9">
             <div className="slide-content">
@@ -353,7 +305,7 @@ const Presentation = () => {
           </div>
         );
 
-      case 10:
+      case 8:
         return (
           <div className="slide" id="slide-10">
             <div className="slide-content">
@@ -384,12 +336,12 @@ const Presentation = () => {
           </div>
         );
 
-      case 12:
+      case 9:
         return (
           <div className="slide" id="slide-12">
             <div className="slide-content">
               <div className="section">
-                <h2 className="section-title topic-title">2.4 数据管理与状态同步</h2>
+                <h2 className="section-title topic-title">2.4 数据管理</h2>
                 <div className="websocket-info">
                   <div className="ws-feature">
                     <div className="ws-content">
@@ -415,13 +367,12 @@ const Presentation = () => {
           </div>
         );
 
-      case 13:
+      case 10:
         return (
-          <div className="slide" id="slide-13">
+          <div className="slide" id="slide-13" style={{paddingTop:0}}>
             <div className="slide-content">
               <div className="thank-you">
-                <h2 className="thank-title">谢谢大家！</h2>
-                <p>欢迎提问交流</p>
+                <h2 className="thank-title" style={{fontSize:'100px'}}>感谢聆听！</h2>
               </div>
             </div>
           </div>
