@@ -4,7 +4,7 @@ import './Presentation.scss';
 const Presentation = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const totalSlides = 10;
+  const totalSlides = 11;
 
   // 幻灯片控制函数
   const nextSlide = () => {
@@ -85,10 +85,10 @@ const Presentation = () => {
           <div className="slide" id="slide-1">
             <div className="slide-content">
               <h1 className="title main-title">AI麦可换组分享</h1>
-              <div className="subtitle module-title" style={{fontSize:'50px'}}>工作方式与技术架构</div>
+              <div className="subtitle " style={{fontSize:'50px',color:'#475569',marginBottom:0}}>工作方式与技术架构</div>
               <div className="presenter-info">
                 <p>分享人：韩志朋</p>
-                <p>2025-08-20</p>
+                <p>2025-08-26</p>
               </div>
             </div>
           </div>
@@ -272,9 +272,66 @@ const Presentation = () => {
           </div>
         );
 
-
-
       case 7:
+        return (
+          <div className="slide" id="slide-5">
+            <div className="slide-content">
+              <h2 className="slide-title">技术方面</h2>
+              <div className="section">
+                <h3 className="section-title">2.1 挂载在VO页面</h3>
+                <div className="tech-info">
+                  <div className="tech-item">
+                    <div className="tech-content">
+                      <h4>挂载方式</h4>
+                      <p>通过JavaScript动态注入的方式挂载到VO页面</p>
+                      <div className="tech-details">
+                        <ul>
+                          <li><strong>动态脚本注入</strong>：在VO页面加载时自动注入mai.js</li>
+                          <li><strong>固定定位挂载</strong>：在页面右下角创建固定位置的舞台容器</li>
+                          <li><strong>非侵入式集成</strong>：直接操作document.body，不依赖VO页面DOM结构</li>
+                          <li><strong>样式完全隔离</strong>：独立的CSS文件，避免与VO页面样式冲突</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="tech-item">
+                    <div className="tech-content">
+                      <h4>技术实现</h4>
+                      <p>基于现代前端技术的插件化集成方案</p>
+                      <div className="tech-details">
+                        <ul>
+                          <li><strong>VO系统集成点</strong>：OtherCodeGtmFilter.java的appendMaiJsCode方法</li>
+                          <li><strong>挂载流程</strong>：页面加载→等待DOM就绪→创建舞台→初始化机器人→加载业务模块</li>
+                          <li><strong>容器特性</strong>：position: fixed, z-index: 1500, 响应式高度设计</li>
+                          <li><strong>异步加载</strong>：支持按需加载业务模块，提升性能</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="tech-item">
+                    <div className="tech-content">
+                      <h4>集成优势</h4>
+                      <p>零侵入、高兼容、易维护的集成架构</p>
+                      <div className="tech-details">
+                        <ul>
+                          <li><strong>零侵入性</strong>：不修改VO页面现有代码，完全独立运行</li>
+                          <li><strong>高兼容性</strong>：支持不同版本的VO系统，适应各种业务场景</li>
+                          <li><strong>独立部署</strong>：可独立构建部署，不影响VO系统稳定性</li>
+                          <li><strong>开发友好</strong>：支持本地开发调试，热重载等现代开发体验</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="manual-input">
+                  <p><strong>补充内容：</strong>[MAI Assistant通过JavaScript动态注入的方式挂载到VO页面，在页面右下角创建固定位置的智能助手界面。这种挂载方式实现了"插件化集成"，作为一个独立的前端应用，可以无缝地集成到任何VO页面中，提供AI功能服务，同时保持与VO页面的视觉一致性和业务数据交互能力。]</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 8:
         return (
           <div className="slide" id="slide-9">
             <div className="slide-content">
@@ -305,7 +362,7 @@ const Presentation = () => {
           </div>
         );
 
-      case 8:
+      case 9:
         return (
           <div className="slide" id="slide-10">
             <div className="slide-content">
@@ -336,7 +393,7 @@ const Presentation = () => {
           </div>
         );
 
-      case 9:
+      case 10:
         return (
           <div className="slide" id="slide-12">
             <div className="slide-content">
@@ -367,7 +424,7 @@ const Presentation = () => {
           </div>
         );
 
-      case 10:
+      case 11:
         return (
           <div className="slide" id="slide-13" style={{paddingTop:0}}>
             <div className="slide-content">
