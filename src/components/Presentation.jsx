@@ -4,7 +4,7 @@ import './Presentation.scss';
 const Presentation = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const totalSlides = 11;
+  const totalSlides = 10;
 
   // 幻灯片控制函数
   const nextSlide = () => {
@@ -88,7 +88,7 @@ const Presentation = () => {
               <div className="subtitle " style={{fontSize:'50px',color:'#475569',marginBottom:0}}>工作方式与技术架构</div>
               <div className="presenter-info">
                 <p>分享人：韩志朋</p>
-                <p>2025-08-26</p>
+                <p>2025-09-23</p>
               </div>
             </div>
           </div>
@@ -255,15 +255,11 @@ const Presentation = () => {
                     </div>
                     <div className="subtitle-item">
                       <span className="number">02</span>
-                      <span className="text">路由与缓存机制</span>
+                      <span className="text">单页应用与状态管理</span>
                     </div>
                     <div className="subtitle-item">
                       <span className="number">03</span>
                       <span className="text">WebSocket推送</span>
-                    </div>
-                    <div className="subtitle-item">
-                      <span className="number">04</span>
-                      <span className="text">数据管理与状态同步</span>
                     </div>
                   </div>
                 </div>
@@ -276,55 +272,27 @@ const Presentation = () => {
         return (
           <div className="slide" id="slide-5">
             <div className="slide-content">
-              <h2 className="slide-title">技术方面</h2>
               <div className="section">
-                <h3 className="section-title">2.1 挂载在VO页面</h3>
-                <div className="tech-info">
-                  <div className="tech-item">
-                    <div className="tech-content">
-                      <h4>挂载方式</h4>
-                      <p>通过JavaScript动态注入的方式挂载到VO页面</p>
-                      <div className="tech-details">
-                        <ul>
-                          <li><strong>动态脚本注入</strong>：在VO页面加载时自动注入mai.js</li>
-                          <li><strong>固定定位挂载</strong>：在页面右下角创建固定位置的舞台容器</li>
-                          <li><strong>非侵入式集成</strong>：直接操作document.body，不依赖VO页面DOM结构</li>
-                          <li><strong>样式完全隔离</strong>：独立的CSS文件，避免与VO页面样式冲突</li>
-                        </ul>
-                      </div>
+                <h2 className="section-title topic-title">2.1 挂载在VO页面</h2>
+                <div className="tech-stack">
+                  <div className="stack-item">
+                    <div className="stack-content">
+                      <h3 className="feature-title">动态注入</h3>
+                      <p>通过JavaScript动态注入的方式挂载到VO页面，非侵入式集成</p>
                     </div>
                   </div>
-                  <div className="tech-item">
-                    <div className="tech-content">
-                      <h4>技术实现</h4>
-                      <p>基于现代前端技术的插件化集成方案</p>
-                      <div className="tech-details">
-                        <ul>
-                          <li><strong>VO系统集成点</strong>：OtherCodeGtmFilter.java的appendMaiJsCode方法</li>
-                          <li><strong>挂载流程</strong>：页面加载→等待DOM就绪→创建舞台→初始化机器人→加载业务模块</li>
-                          <li><strong>容器特性</strong>：position: fixed, z-index: 1500, 响应式高度设计</li>
-                          <li><strong>异步加载</strong>：支持按需加载业务模块，提升性能</li>
-                        </ul>
-                      </div>
+                  <div className="stack-item">
+                    <div className="stack-content">
+                      <h3 className="feature-title">挂载位置</h3>
+                      <p>fixed定位，1500层级，不影响VO页面布局</p>
                     </div>
                   </div>
-                  <div className="tech-item">
-                    <div className="tech-content">
-                      <h4>集成优势</h4>
-                      <p>零侵入、高兼容、易维护的集成架构</p>
-                      <div className="tech-details">
-                        <ul>
-                          <li><strong>零侵入性</strong>：不修改VO页面现有代码，完全独立运行</li>
-                          <li><strong>高兼容性</strong>：支持不同版本的VO系统，适应各种业务场景</li>
-                          <li><strong>独立部署</strong>：可独立构建部署，不影响VO系统稳定性</li>
-                          <li><strong>开发友好</strong>：支持本地开发调试，热重载等现代开发体验</li>
-                        </ul>
-                      </div>
+                  <div className="stack-item">
+                    <div className="stack-content">
+                      <h3 className="feature-title">按需加载</h3>
+                      <p>业务模块按需动态加载，支持代码分割，避免一次性加载所有代码</p>
                     </div>
                   </div>
-                </div>
-                <div className="manual-input">
-                  <p><strong>补充内容：</strong>[MAI Assistant通过JavaScript动态注入的方式挂载到VO页面，在页面右下角创建固定位置的智能助手界面。这种挂载方式实现了"插件化集成"，作为一个独立的前端应用，可以无缝地集成到任何VO页面中，提供AI功能服务，同时保持与VO页面的视觉一致性和业务数据交互能力。]</p>
                 </div>
               </div>
             </div>
@@ -336,24 +304,24 @@ const Presentation = () => {
           <div className="slide" id="slide-9">
             <div className="slide-content">
               <div className="section">
-                <h2 className="section-title topic-title">2.2 路由与缓存机制</h2>
+                <h2 className="section-title topic-title">2.2 单页应用与状态管理</h2>
                 <div className="tech-stack">
                   <div className="stack-item">
                     <div className="stack-content">
-                      <h3 className="feature-title">路由跳转机制</h3>
-                      <p>正则表达式匹配，动态模块加载，路由守卫，无刷新切换</p>
+                      <h3 className="feature-title">单页应用</h3>
+                      <p>生命周期管理，状态同步，事件驱动更新</p>
                     </div>
                   </div>
                   <div className="stack-item">
                     <div className="stack-content">
-                      <h3 className="feature-title">页面缓存策略</h3>
-                      <p>组件缓存，状态保持，数据缓存，DOM复用</p>
+                      <h3 className="feature-title">数据管理</h3>
+                      <p>Svelte Stores状态管理，主子页面数据交互，事件总线通信</p>
                     </div>
                   </div>
                   <div className="stack-item">
                     <div className="stack-content">
-                      <h3 className="feature-title">生命周期管理</h3>
-                      <p>Vue生命周期不工作，使用Svelte原生钩子</p>
+                      <h3 className="feature-title">路由、缓存机制</h3>
+                      <p>路由跳转API，实例缓存结构，生命周期跳过问题</p>
                     </div>
                   </div>
                 </div>
@@ -371,20 +339,20 @@ const Presentation = () => {
                 <div className="spa-features">
                   <div className="feature-grid">
                     <div className="feature-card">
-                      <h3 className="feature-title">技术实现</h3>
-                      <p>SockJS + STOMP，兼容性好，消息格式标准化</p>
+                      <h3 className="feature-title">技术栈选择</h3>
+                      <p>SockJS + STOMP，自动降级，多传输方式支持</p>
                     </div>
                     <div className="feature-card">
-                      <h3 className="feature-title">架构设计</h3>
-                      <p>观察者模式，事件驱动，消息分发，状态同步</p>
+                      <h3 className="feature-title">事件系统设计</h3>
+                      <p>观察者模式，消息订阅机制，事件去重，错误容错</p>
                     </div>
                     <div className="feature-card">
-                      <h3 className="feature-title">应用场景</h3>
-                      <p>任务通知，进度更新，消息推送，状态同步</p>
+                      <h3 className="feature-title">业务应用场景</h3>
+                      <p>实时通知系统，业务状态同步，用户状态管理</p>
                     </div>
                     <div className="feature-card">
-                      <h3 className="feature-title">连接管理</h3>
-                      <p>自动重连，心跳检测，状态监控，降级方案</p>
+                      <h3 className="feature-title">性能优化策略</h3>
+                      <p>消息去重，条件订阅，连接管理，容错机制</p>
                     </div>
                   </div>
                 </div>
@@ -394,37 +362,6 @@ const Presentation = () => {
         );
 
       case 10:
-        return (
-          <div className="slide" id="slide-12">
-            <div className="slide-content">
-              <div className="section">
-                <h2 className="section-title topic-title">2.4 数据管理</h2>
-                <div className="websocket-info">
-                  <div className="ws-feature">
-                    <div className="ws-content">
-                      <h3 className="feature-title">Svelte Stores状态管理</h3>
-                      <p>响应式状态管理，跨组件数据共享，持久化存储</p>
-                    </div>
-                  </div>
-                  <div className="ws-feature">
-                    <div className="ws-content">
-                      <h3 className="feature-title">主子页面数据交互</h3>
-                      <p>Storage机制，模块独立存储，数据同步</p>
-                    </div>
-                  </div>
-                  <div className="ws-feature">
-                    <div className="ws-content">
-                      <h3 className="feature-title">事件总线通信</h3>
-                      <p>事件注册触发，数据传递，解耦设计</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        );
-
-      case 11:
         return (
           <div className="slide" id="slide-13" style={{paddingTop:0}}>
             <div className="slide-content">
