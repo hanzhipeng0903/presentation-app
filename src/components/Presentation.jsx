@@ -85,7 +85,7 @@ const Presentation = () => {
           <div className="slide" id="slide-1">
             <div className="slide-content">
               <h1 className="title main-title">AI麦可换组分享</h1>
-              <div className="subtitle " style={{fontSize:'50px',color:'#475569',marginBottom:0}}>工作方式与技术架构</div>
+              <div className="subtitle " style={{fontSize:'50px',color:'#475569',marginBottom:0}}>工作方式与技术特点</div>
               <div className="presenter-info">
                 <p>分享人：韩志朋</p>
                 <p>2025-09-23</p>
@@ -110,8 +110,8 @@ const Presentation = () => {
                 <div className="content-item">
                   <span className="number">02</span>
                   <div className="content-details">
-                    <span className="text">技术架构</span>
-                    <p className="description">技术架构设计、前端技术栈、应用特性</p>
+                    <span className="text">技术特点</span>
+                    <p className="description">技术特点、前端技术栈、应用特性</p>
                   </div>
                 </div>
               </div>
@@ -246,7 +246,7 @@ const Presentation = () => {
           <div className="slide" id="slide-7">
             <div className="slide-content">
               <div className="section">
-                <h2 className="section-title module-title">技术架构</h2>
+                <h2 className="section-title module-title">技术特点</h2>
                 <div className="module-intro">
                   <div className="subtitle-list">
                     <div className="subtitle-item">
@@ -309,7 +309,7 @@ const Presentation = () => {
                   <div className="stack-item">
                     <div className="stack-content">
                       <h3 className="feature-title">单页应用</h3>
-                      <p>生命周期管理，状态同步，事件驱动更新</p>
+                      <p>生命周期管理，状态同步，Svelet+React</p>
                     </div>
                   </div>
                   <div className="stack-item">
@@ -344,15 +344,15 @@ const Presentation = () => {
                     </div>
                     <div className="feature-card">
                       <h3 className="feature-title">事件系统设计</h3>
-                      <p>观察者模式，消息订阅机制，事件去重，错误容错</p>
+                      <p>观察者模式，消息订阅机制，事件去重</p>
                     </div>
                     <div className="feature-card">
                       <h3 className="feature-title">业务应用场景</h3>
                       <p>实时通知系统，业务状态同步，用户状态管理</p>
                     </div>
                     <div className="feature-card">
-                      <h3 className="feature-title">性能优化策略</h3>
-                      <p>消息去重，条件订阅，连接管理，容错机制</p>
+                      <h3 className="feature-title">实际应用场景</h3>
+                      <p>AI对话、消息通知、自动化任务等</p>
                     </div>
                   </div>
                 </div>
